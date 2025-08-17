@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by name of section</h2>
+    <p> Meal Price : <input type="number" id="mealPrice"> </p>
+    <p> Tip : <input type="number" id="tip"> </p>
+    <p> Service Charge : <input type="number" id="serviceCharge"> </p>
+
+    <button onclick="totalMeal()">Accept Input</button>
+    <p id="totalCost"></p> 
+
+    <script>
+        function totalMeal() {
+            let mealPrice = Number(document.getElementById("mealPrice").value);
+            let tip = Number(document.getElementById("tip").value);
+            let serviceCharge = Number(document.getElementById("serviceCharge").value);
+            let totalCost = mealPrice + tip + (serviceCharge / 100 * mealPrice);
+            document.getElementById("totalCost").innerHTML = "Total Cost: " + totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
