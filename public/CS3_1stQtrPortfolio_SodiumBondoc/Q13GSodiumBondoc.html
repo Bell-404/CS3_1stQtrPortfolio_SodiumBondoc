@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h2> Q1 3rd Graded Exercise submitted Bell Bondoc of 9Sodium</h2>
+   <!-- Enter your HTML tags below  but before the opening script tag -->
+    <p>Guess the number : ****</p>
+    <p>The number is from 1 to 100.</p>
+    <p> Enter your guess : <input type="number" id="userGuess"> </p>
+    <button onclick="checkIt()">Check It</button>
+    <div id="result"></div>
+    
+    <script>
+
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+        
+       function checkIt() {
+            var userGuess = parseInt(document.getElementById("userGuess").value);
+
+            if (userGuess < dNumber) {
+                document.getElementById("result").innerHTML = "Result : Higher";
+            }
+            else if (userGuess > dNumber) {
+                document.getElementById("result").innerHTML = "Result : Lower";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Result : You are correct!";
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
