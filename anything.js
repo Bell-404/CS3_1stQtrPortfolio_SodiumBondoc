@@ -28,13 +28,14 @@ rli.on('line', give_channel_name) // line -> series of characters typed + enter
 function give_channel_name(num) {
     switch (num) {
         case '7':
-            console.log('GMA')
+            console.log("gm" + "a")
             break
         case '2':
-            console.log('ABS-CBN')
+            console.log("abs", "cbn")
             break
         case '13':
-            console.log('IBC')
+            var last_letter = "C"
+            console.log(`IB${last_letter}`)
             break
         case '4':
             console.log('PTV')
